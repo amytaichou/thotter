@@ -11,7 +11,7 @@
 
 @interface TimelineViewController ()
 
-
+@property (nonatomic, strong) NSArray *tweetArray;
 
 @end
 
@@ -27,6 +27,8 @@
             for (NSDictionary *dictionary in tweets) {
                 NSString *text = dictionary[@"text"];
                 NSLog(@"%@", text);
+               // _tweetArray = getHomeTimelineWithCompletion;
+                
             }
         } else {
             NSLog(@"😫😫😫 Error getting home timeline: %@", error.localizedDescription);

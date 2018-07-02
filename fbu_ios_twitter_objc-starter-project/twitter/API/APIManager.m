@@ -53,15 +53,20 @@ static NSString * const consumerSecret = @"RjcYAd4QwomZMG2H1Gn7nyyccOljuHh0iC2g7
     [self GET:@"1.1/statuses/home_timeline.json"
    parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, NSArray *  _Nullable tweetDictionaries) {
        
-       // Manually cache the tweets. If the request fails, restore from cache if possible.
+       NSMutableArray *tweets  = [Tweet tweetsWithArray:tweetDictionaries];
+       completion(tweets, nil);
+       
+       /* // Manually cache the tweets. If the request fails, restore from cache if possible.
        NSData *data = [NSKeyedArchiver archivedDataWithRootObject:tweetDictionaries];
        [[NSUserDefaults standardUserDefaults] setValue:data forKey:@"hometimeline_tweets"];
 
-       completion(tweetDictionaries, nil);
+       completion(tweetDictionaries, nil); */
        
    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
        
-       NSArray *tweetDictionaries = nil;
+       completion(nil, error);
+       
+       /* NSArray *tweetDictionaries = nil;
        
        // Fetch tweets from cache if possible
        NSData *data = [[NSUserDefaults standardUserDefaults] valueForKey:@"hometimeline_tweets"];
@@ -69,7 +74,7 @@ static NSString * const consumerSecret = @"RjcYAd4QwomZMG2H1Gn7nyyccOljuHh0iC2g7
            tweetDictionaries = [NSKeyedUnarchiver unarchiveObjectWithData:data];
        }
        
-       completion(tweetDictionaries, error);
+       completion(tweetDictionaries, error); */
    }];
 }
 
