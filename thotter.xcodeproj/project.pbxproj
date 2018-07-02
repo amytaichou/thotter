@@ -1,0 +1,582 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CC13077820EAC429007E8DD5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CC13077720EAC429007E8DD5 /* AppDelegate.m */; };
+		CC13077B20EAC429007E8DD5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC13077A20EAC429007E8DD5 /* ViewController.m */; };
+		CC13077E20EAC429007E8DD5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC13077C20EAC429007E8DD5 /* Main.storyboard */; };
+		CC13078020EAC42A007E8DD5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC13077F20EAC42A007E8DD5 /* Assets.xcassets */; };
+		CC13078320EAC42A007E8DD5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC13078120EAC42A007E8DD5 /* LaunchScreen.storyboard */; };
+		CC13078620EAC42A007E8DD5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CC13078520EAC42A007E8DD5 /* main.m */; };
+		CC13079020EAC42A007E8DD5 /* thotterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CC13078F20EAC42A007E8DD5 /* thotterTests.m */; };
+		CC13079B20EAC42A007E8DD5 /* thotterUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CC13079A20EAC42A007E8DD5 /* thotterUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CC13078C20EAC42A007E8DD5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CC13076B20EAC429007E8DD5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CC13077220EAC429007E8DD5;
+			remoteInfo = thotter;
+		};
+		CC13079720EAC42A007E8DD5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CC13076B20EAC429007E8DD5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CC13077220EAC429007E8DD5;
+			remoteInfo = thotter;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CC13077320EAC429007E8DD5 /* thotter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = thotter.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC13077620EAC429007E8DD5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		CC13077720EAC429007E8DD5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		CC13077920EAC429007E8DD5 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		CC13077A20EAC429007E8DD5 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		CC13077D20EAC429007E8DD5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CC13077F20EAC42A007E8DD5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CC13078220EAC42A007E8DD5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CC13078420EAC42A007E8DD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC13078520EAC42A007E8DD5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CC13078B20EAC42A007E8DD5 /* thotterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = thotterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC13078F20EAC42A007E8DD5 /* thotterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = thotterTests.m; sourceTree = "<group>"; };
+		CC13079120EAC42A007E8DD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC13079620EAC42A007E8DD5 /* thotterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = thotterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC13079A20EAC42A007E8DD5 /* thotterUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = thotterUITests.m; sourceTree = "<group>"; };
+		CC13079C20EAC42A007E8DD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CC13077020EAC429007E8DD5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC13078820EAC42A007E8DD5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC13079320EAC42A007E8DD5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CC13076A20EAC429007E8DD5 = {
+			isa = PBXGroup;
+			children = (
+				CC13077520EAC429007E8DD5 /* thotter */,
+				CC13078E20EAC42A007E8DD5 /* thotterTests */,
+				CC13079920EAC42A007E8DD5 /* thotterUITests */,
+				CC13077420EAC429007E8DD5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CC13077420EAC429007E8DD5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CC13077320EAC429007E8DD5 /* thotter.app */,
+				CC13078B20EAC42A007E8DD5 /* thotterTests.xctest */,
+				CC13079620EAC42A007E8DD5 /* thotterUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CC13077520EAC429007E8DD5 /* thotter */ = {
+			isa = PBXGroup;
+			children = (
+				CC13077620EAC429007E8DD5 /* AppDelegate.h */,
+				CC13077720EAC429007E8DD5 /* AppDelegate.m */,
+				CC13077920EAC429007E8DD5 /* ViewController.h */,
+				CC13077A20EAC429007E8DD5 /* ViewController.m */,
+				CC13077C20EAC429007E8DD5 /* Main.storyboard */,
+				CC13077F20EAC42A007E8DD5 /* Assets.xcassets */,
+				CC13078120EAC42A007E8DD5 /* LaunchScreen.storyboard */,
+				CC13078420EAC42A007E8DD5 /* Info.plist */,
+				CC13078520EAC42A007E8DD5 /* main.m */,
+			);
+			path = thotter;
+			sourceTree = "<group>";
+		};
+		CC13078E20EAC42A007E8DD5 /* thotterTests */ = {
+			isa = PBXGroup;
+			children = (
+				CC13078F20EAC42A007E8DD5 /* thotterTests.m */,
+				CC13079120EAC42A007E8DD5 /* Info.plist */,
+			);
+			path = thotterTests;
+			sourceTree = "<group>";
+		};
+		CC13079920EAC42A007E8DD5 /* thotterUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CC13079A20EAC42A007E8DD5 /* thotterUITests.m */,
+				CC13079C20EAC42A007E8DD5 /* Info.plist */,
+			);
+			path = thotterUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CC13077220EAC429007E8DD5 /* thotter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC13079F20EAC42A007E8DD5 /* Build configuration list for PBXNativeTarget "thotter" */;
+			buildPhases = (
+				CC13076F20EAC429007E8DD5 /* Sources */,
+				CC13077020EAC429007E8DD5 /* Frameworks */,
+				CC13077120EAC429007E8DD5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = thotter;
+			productName = thotter;
+			productReference = CC13077320EAC429007E8DD5 /* thotter.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CC13078A20EAC42A007E8DD5 /* thotterTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC1307A220EAC42A007E8DD5 /* Build configuration list for PBXNativeTarget "thotterTests" */;
+			buildPhases = (
+				CC13078720EAC42A007E8DD5 /* Sources */,
+				CC13078820EAC42A007E8DD5 /* Frameworks */,
+				CC13078920EAC42A007E8DD5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CC13078D20EAC42A007E8DD5 /* PBXTargetDependency */,
+			);
+			name = thotterTests;
+			productName = thotterTests;
+			productReference = CC13078B20EAC42A007E8DD5 /* thotterTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CC13079520EAC42A007E8DD5 /* thotterUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC1307A520EAC42A007E8DD5 /* Build configuration list for PBXNativeTarget "thotterUITests" */;
+			buildPhases = (
+				CC13079220EAC42A007E8DD5 /* Sources */,
+				CC13079320EAC42A007E8DD5 /* Frameworks */,
+				CC13079420EAC42A007E8DD5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CC13079820EAC42A007E8DD5 /* PBXTargetDependency */,
+			);
+			name = thotterUITests;
+			productName = thotterUITests;
+			productReference = CC13079620EAC42A007E8DD5 /* thotterUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CC13076B20EAC429007E8DD5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = "Amy Liu";
+				TargetAttributes = {
+					CC13077220EAC429007E8DD5 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					CC13078A20EAC42A007E8DD5 = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = CC13077220EAC429007E8DD5;
+					};
+					CC13079520EAC42A007E8DD5 = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = CC13077220EAC429007E8DD5;
+					};
+				};
+			};
+			buildConfigurationList = CC13076E20EAC429007E8DD5 /* Build configuration list for PBXProject "thotter" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CC13076A20EAC429007E8DD5;
+			productRefGroup = CC13077420EAC429007E8DD5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CC13077220EAC429007E8DD5 /* thotter */,
+				CC13078A20EAC42A007E8DD5 /* thotterTests */,
+				CC13079520EAC42A007E8DD5 /* thotterUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CC13077120EAC429007E8DD5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC13078320EAC42A007E8DD5 /* LaunchScreen.storyboard in Resources */,
+				CC13078020EAC42A007E8DD5 /* Assets.xcassets in Resources */,
+				CC13077E20EAC429007E8DD5 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC13078920EAC42A007E8DD5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC13079420EAC42A007E8DD5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CC13076F20EAC429007E8DD5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC13077B20EAC429007E8DD5 /* ViewController.m in Sources */,
+				CC13078620EAC42A007E8DD5 /* main.m in Sources */,
+				CC13077820EAC429007E8DD5 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC13078720EAC42A007E8DD5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC13079020EAC42A007E8DD5 /* thotterTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC13079220EAC42A007E8DD5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC13079B20EAC42A007E8DD5 /* thotterUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CC13078D20EAC42A007E8DD5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CC13077220EAC429007E8DD5 /* thotter */;
+			targetProxy = CC13078C20EAC42A007E8DD5 /* PBXContainerItemProxy */;
+		};
+		CC13079820EAC42A007E8DD5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CC13077220EAC429007E8DD5 /* thotter */;
+			targetProxy = CC13079720EAC42A007E8DD5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CC13077C20EAC429007E8DD5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CC13077D20EAC429007E8DD5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CC13078120EAC42A007E8DD5 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CC13078220EAC42A007E8DD5 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CC13079D20EAC42A007E8DD5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		CC13079E20EAC42A007E8DD5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CC1307A020EAC42A007E8DD5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2UG759YXVN;
+				INFOPLIST_FILE = thotter/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = maymayliu.thotter;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CC1307A120EAC42A007E8DD5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2UG759YXVN;
+				INFOPLIST_FILE = thotter/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = maymayliu.thotter;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CC1307A320EAC42A007E8DD5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2UG759YXVN;
+				INFOPLIST_FILE = thotterTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = maymayliu.thotterTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/thotter.app/thotter";
+			};
+			name = Debug;
+		};
+		CC1307A420EAC42A007E8DD5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2UG759YXVN;
+				INFOPLIST_FILE = thotterTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = maymayliu.thotterTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/thotter.app/thotter";
+			};
+			name = Release;
+		};
+		CC1307A620EAC42A007E8DD5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2UG759YXVN;
+				INFOPLIST_FILE = thotterUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = maymayliu.thotterUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = thotter;
+			};
+			name = Debug;
+		};
+		CC1307A720EAC42A007E8DD5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2UG759YXVN;
+				INFOPLIST_FILE = thotterUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = maymayliu.thotterUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = thotter;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CC13076E20EAC429007E8DD5 /* Build configuration list for PBXProject "thotter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC13079D20EAC42A007E8DD5 /* Debug */,
+				CC13079E20EAC42A007E8DD5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CC13079F20EAC42A007E8DD5 /* Build configuration list for PBXNativeTarget "thotter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC1307A020EAC42A007E8DD5 /* Debug */,
+				CC1307A120EAC42A007E8DD5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CC1307A220EAC42A007E8DD5 /* Build configuration list for PBXNativeTarget "thotterTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC1307A320EAC42A007E8DD5 /* Debug */,
+				CC1307A420EAC42A007E8DD5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CC1307A520EAC42A007E8DD5 /* Build configuration list for PBXNativeTarget "thotterUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC1307A620EAC42A007E8DD5 /* Debug */,
+				CC1307A720EAC42A007E8DD5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CC13076B20EAC429007E8DD5 /* Project object */;
+}
