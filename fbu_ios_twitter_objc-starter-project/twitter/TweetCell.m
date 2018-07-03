@@ -7,6 +7,7 @@
 //
 
 #import "TweetCell.h"
+#import "Tweet.h"
 
 @implementation TweetCell
 
@@ -15,10 +16,16 @@
     // Initialization code
 }
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
+/* - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
 
     // Configure the view for the selected state
-}
+    
+} */
 
-@end
+- (void) setTweet:(Tweet *)tweet {
+    self.username.text = tweet.user.name;
+    self.tweetContent.text = tweet.text;
+}
+    
+    @end

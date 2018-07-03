@@ -55,7 +55,7 @@ static NSString * const consumerSecret = @"RjcYAd4QwomZMG2H1Gn7nyyccOljuHh0iC2g7
        
        NSMutableArray *tweets  = [Tweet tweetsWithArray:tweetDictionaries];
        completion(tweets, nil);
-       
+              
        /* // Manually cache the tweets. If the request fails, restore from cache if possible.
        NSData *data = [NSKeyedArchiver archivedDataWithRootObject:tweetDictionaries];
        [[NSUserDefaults standardUserDefaults] setValue:data forKey:@"hometimeline_tweets"];
