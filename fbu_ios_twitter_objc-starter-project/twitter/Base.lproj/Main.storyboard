@@ -119,7 +119,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="ugE-Ul-H9I"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Home Timeline" id="MOc-fV-EZE"/>
+                    <navigationItem key="navigationItem" title="Home Timeline" id="MOc-fV-EZE">
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="13I-fV-2bq"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="edit-icon" id="ILl-Zd-Vrw"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="8em-R9-uJ6" id="CSS-aM-Bnl"/>
                     </connections>
@@ -148,8 +151,12 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="1iV-Q8-WP7"/>
                     </view>
-                    <navigationItem key="navigationItem" id="dnM-q4-ohC"/>
+                    <navigationItem key="navigationItem" id="dnM-q4-ohC">
+                        <barButtonItem key="leftBarButtonItem" image="close-icon" id="CiT-be-FR1"/>
+                        <barButtonItem key="rightBarButtonItem" title="Tweet" id="Ngm-Kj-nKP"/>
+                    </navigationItem>
                     <connections>
+                        <outlet property="closeButton" destination="X50-jY-Vm7" id="oyb-PA-E5d"/>
                         <outlet property="composeTweet" destination="X50-jY-Vm7" id="Wz8-UK-kHK"/>
                     </connections>
                 </viewController>
@@ -196,5 +203,7 @@
     </scenes>
     <resources>
         <image name="TwitterLogoBlue" width="200" height="200"/>
+        <image name="close-icon" width="26" height="24"/>
+        <image name="edit-icon" width="30" height="27"/>
     </resources>
 </document>

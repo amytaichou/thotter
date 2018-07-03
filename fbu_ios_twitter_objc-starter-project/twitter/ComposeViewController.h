@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface ComposeViewController : UIViewController
+
+@property (weak, nonatomic) IBOutlet UITextView *closeButton;
 @property (weak, nonatomic) IBOutlet UITextView *composeTweet;
 
 @end
