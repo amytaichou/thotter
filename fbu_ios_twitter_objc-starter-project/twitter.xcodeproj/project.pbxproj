@@ -20,6 +20,7 @@
 		CC1307AA20EACD21007E8DD5 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = CC1307A920EACD21007E8DD5 /* User.m */; };
 		CC1307AE20EACD84007E8DD5 /* Tweet.m in Sources */ = {isa = PBXBuildFile; fileRef = CC1307AD20EACD84007E8DD5 /* Tweet.m */; };
 		CC1307B420EAD463007E8DD5 /* TweetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CC1307B320EAD463007E8DD5 /* TweetCell.m */; };
+		CC1307B720EBFD33007E8DD5 /* ComposeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC1307B620EBFD33007E8DD5 /* ComposeViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,8 @@
 		CC1307AD20EACD84007E8DD5 /* Tweet.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tweet.m; sourceTree = "<group>"; };
 		CC1307B220EAD463007E8DD5 /* TweetCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TweetCell.h; sourceTree = "<group>"; };
 		CC1307B320EAD463007E8DD5 /* TweetCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TweetCell.m; sourceTree = "<group>"; };
+		CC1307B520EBFD33007E8DD5 /* ComposeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ComposeViewController.h; sourceTree = "<group>"; };
+		CC1307B620EBFD33007E8DD5 /* ComposeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ComposeViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +111,8 @@
 				CC1307AD20EACD84007E8DD5 /* Tweet.m */,
 				CC1307B220EAD463007E8DD5 /* TweetCell.h */,
 				CC1307B320EAD463007E8DD5 /* TweetCell.m */,
+				CC1307B520EBFD33007E8DD5 /* ComposeViewController.h */,
+				CC1307B620EBFD33007E8DD5 /* ComposeViewController.m */,
 			);
 			path = twitter;
 			sourceTree = "<group>";
@@ -252,6 +257,7 @@
 				CC1307B420EAD463007E8DD5 /* TweetCell.m in Sources */,
 				6AD278F320BCA6020085BC29 /* BDBOAuth1SessionManager+SFAuthenticationSession.m in Sources */,
 				CC1307AA20EACD21007E8DD5 /* User.m in Sources */,
+				CC1307B720EBFD33007E8DD5 /* ComposeViewController.m in Sources */,
 				6AD278E820BC4B970085BC29 /* main.m in Sources */,
 				CC1307AE20EACD84007E8DD5 /* Tweet.m in Sources */,
 				6AD2790620BCC0380085BC29 /* LoginViewController.m in Sources */,

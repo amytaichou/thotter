@@ -24,9 +24,14 @@
     
     UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
     
+    [self fetchTweets];
+    
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
     
+}
+
+- (void)fetchTweets {
     // Get timeline
     [[APIManager shared] getHomeTimelineWithCompletion:^(NSArray *tweets, NSError *error) {
         if (tweets) {
@@ -35,7 +40,7 @@
                 self.tweetArray = tweets; // *****
                 NSLog(@"%@", tweet.text);
             }
-
+            
             [self.tableView reloadData];
             
         } else {
@@ -69,15 +74,17 @@
     
     // Create NSURL and NSURLRequest
     
-    NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]
+   /* NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]
                                                           delegate:nil
                                                      delegateQueue:[NSOperationQueue mainQueue]];
-    session.configuration.requestCachePolicy = NSURLRequestReloadIgnoringLocalCacheData;
+    session.configuration.requestCachePolicy = NSURLRequestReloadIgnoringLocalCacheData; */
     
-    NSURLSessionDataTask *task = [session dataTaskWithRequest:request
+    [self fetchTweets];
+    
+   /* NSURLSessionDataTask *task = [session dataTaskWithRequest:request
                                             completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
                                                 
-                                                // ... Use the new data to update the data source ...
+                                                // ... Use the new data to update the data source ... */
                                                 
                                                 // Reload the tableView now that there is new data
                                                 [self.tableView reloadData];
@@ -85,9 +92,9 @@
                                                 // Tell the refreshControl to stop spinning
                                                 [refreshControl endRefreshing];
                                                 
-                                            }];
+                                     //       }];
     
-    [task resume];
+    // [task resume];
 }
 
 /*
