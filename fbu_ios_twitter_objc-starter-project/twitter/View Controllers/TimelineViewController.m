@@ -9,8 +9,9 @@
 #import "TimelineViewController.h"
 #import "APIManager.h"
 #import "TweetCell.h"
+#import "ComposeViewController.h"
 
-@interface TimelineViewController ()
+@interface TimelineViewController () <ComposeViewControllerDelegate, UITableViewDataSource, UITableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) NSArray *tweetArray;
@@ -74,40 +75,25 @@
 // Hides the RefreshControl
 - (void)beginRefresh:(UIRefreshControl *)refreshControl {
     
-    // Create NSURL and NSURLRequest
-    
-   /* NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]
-                                                          delegate:nil
-                                                     delegateQueue:[NSOperationQueue mainQueue]];
-    session.configuration.requestCachePolicy = NSURLRequestReloadIgnoringLocalCacheData; */
-    
     [self fetchTweets];
+    [self.tableView reloadData];
     
-   /* NSURLSessionDataTask *task = [session dataTaskWithRequest:request
-                                            completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
-                                                
-                                                // ... Use the new data to update the data source ... */
-                                                
-                                                // Reload the tableView now that there is new data
-                                                [self.tableView reloadData];
-                                                
-                                                // Tell the refreshControl to stop spinning
-                                                [refreshControl endRefreshing];
-                                                
-                                     //       }];
-    
-    // [task resume];
+    // Tell the refreshControl to stop spinning
+    [refreshControl endRefreshing];
 }
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    UINavigationController *navigationController = [segue destinationViewController];
+    ComposeViewController *composeController = (ComposeViewController*)navigationController.topViewController;
+    composeController.delegate = self;
 }
-*/
+
 
 
 @end

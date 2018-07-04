@@ -121,7 +121,11 @@
                     </view>
                     <navigationItem key="navigationItem" title="Home Timeline" id="MOc-fV-EZE">
                         <barButtonItem key="leftBarButtonItem" title="Logout" id="13I-fV-2bq"/>
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="edit-icon" id="ILl-Zd-Vrw"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="edit-icon" id="ILl-Zd-Vrw">
+                            <connections>
+                                <segue destination="HsX-NQ-6pO" kind="presentation" id="dkl-p5-jBc"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="8em-R9-uJ6" id="CSS-aM-Bnl"/>
@@ -139,11 +143,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="X50-jY-Vm7">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="What's happening?" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="X50-jY-Vm7">
                                 <rect key="frame" x="0.0" y="64" width="375" height="233"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -152,12 +155,19 @@
                         <viewLayoutGuide key="safeArea" id="1iV-Q8-WP7"/>
                     </view>
                     <navigationItem key="navigationItem" id="dnM-q4-ohC">
-                        <barButtonItem key="leftBarButtonItem" image="close-icon" id="CiT-be-FR1"/>
-                        <barButtonItem key="rightBarButtonItem" title="Tweet" id="Ngm-Kj-nKP"/>
+                        <barButtonItem key="leftBarButtonItem" image="close-icon" id="CiT-be-FR1">
+                            <connections>
+                                <action selector="closeButton:" destination="Y7y-Y1-0Ht" id="oy3-ht-Dgm"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Tweet" id="Ngm-Kj-nKP">
+                            <connections>
+                                <action selector="composeTweet:" destination="Y7y-Y1-0Ht" id="5xv-E8-iUo"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="closeButton" destination="X50-jY-Vm7" id="oyb-PA-E5d"/>
-                        <outlet property="composeTweet" destination="X50-jY-Vm7" id="Wz8-UK-kHK"/>
+                        <outlet property="writeTweet" destination="X50-jY-Vm7" id="M30-nb-9Ad"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XyL-A4-2Ne" userLabel="First Responder" sceneMemberID="firstResponder"/>
