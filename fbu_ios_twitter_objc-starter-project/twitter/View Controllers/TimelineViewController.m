@@ -10,31 +10,44 @@
 #import "APIManager.h"
 #import "TweetCell.h"
 #import "ComposeViewController.h"
+#import "AppDelegate.h"
+#import "LoginViewController.h"
 
 @interface TimelineViewController () <ComposeViewControllerDelegate, UITableViewDataSource, UITableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-@property (nonatomic, strong) NSArray *tweetArray;
+@property (nonatomic, strong) NSMutableArray *tweetArray;
+@property (nonatomic, strong) UIRefreshControl *refreshControl;
 
 @end
 
 @implementation TimelineViewController
 
+- (IBAction)logout:(id)sender {
+    AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+    
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    LoginViewController *loginViewController = [storyboard instantiateViewControllerWithIdentifier:@"LoginViewController"];
+    appDelegate.window.rootViewController = loginViewController;
+    
+    [[APIManager shared] logout];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
-    [refreshControl addTarget:self action:@selector(beginRefresh:) forControlEvents:UIControlEventValueChanged];
-    [self.tableView insertSubview:refreshControl atIndex:0];
-    
-    [self fetchTweets];
     
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
     
+    [self fetchTweets: nil];
+    
+    self.refreshControl = [[UIRefreshControl alloc] init];
+    [self.refreshControl addTarget:self action:@selector(fetchTweets:) forControlEvents:UIControlEventValueChanged];
+    [self.tableView insertSubview:self.refreshControl atIndex:0];
+
 }
 
-- (void)fetchTweets {
+- (void)fetchTweets:(UIView *)sender {
     // Get timeline
     [[APIManager shared] getHomeTimelineWithCompletion:^(NSArray *tweets, NSError *error) {
         if (tweets) {
@@ -45,6 +58,7 @@
             }
             
             [self.tableView reloadData];
+            [self.refreshControl endRefreshing];
             
         } else {
             NSLog(@"😫😫😫 Error getting home timeline: %@", error.localizedDescription);
@@ -70,16 +84,10 @@
     return cell;
 }
 
-// Makes a network request to get updated data
-// Updates the tableView with the new data
-// Hides the RefreshControl
-- (void)beginRefresh:(UIRefreshControl *)refreshControl {
-    
-    [self fetchTweets];
+- (void)didTweet:(Tweet *)tweet {
+    [self.tweetArray insertObject:tweet atIndex:0];
     [self.tableView reloadData];
     
-    // Tell the refreshControl to stop spinning
-    [refreshControl endRefreshing];
 }
 
 

@@ -8,6 +8,8 @@
 
 #import "ComposeViewController.h"
 #import "APIManager.h"
+#import "Tweet.h"
+#import "TweetCell.h"
 
 @interface ComposeViewController ()
 @property (weak, nonatomic) IBOutlet UITextView *writeTweet;
@@ -27,7 +29,7 @@
 }
 
 - (IBAction)composeTweet:(id)sender {
-    [[APIManager shared]postStatusWithText:@"This is my tweet 😀" completion:^(Tweet *tweet, NSError *error) {
+    [[APIManager shared]postStatusWithText:self.writeTweet.text completion:^(Tweet *tweet, NSError *error) {
         if(error){
             NSLog(@"Error composing Tweet: %@", error.localizedDescription);
         }
