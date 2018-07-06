@@ -36,6 +36,9 @@
     
     self.retweetCount.text = [NSString stringWithFormat:@"%i", self.tweet.retweetCount];
     self.favoriteCount.text = [NSString stringWithFormat:@"%i", self.tweet.favoriteCount];
+    
+    self.timestamp.text = self.tweet.createdAtString;
+    self.handle.text = self.tweet.user.screenName;
 }
 
 - (IBAction)didTapFavorite:(id)sender {
