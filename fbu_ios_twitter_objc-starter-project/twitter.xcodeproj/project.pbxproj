@@ -127,8 +127,8 @@
 		6AD278F820BCBC140085BC29 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				CC1307A920EACD21007E8DD5 /* User.m */,
 				CC1307A820EACD21007E8DD5 /* User.h */,
+				CC1307A920EACD21007E8DD5 /* User.m */,
 				CC1307AC20EACD84007E8DD5 /* Tweet.h */,
 				CC1307AD20EACD84007E8DD5 /* Tweet.m */,
 			);

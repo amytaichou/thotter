@@ -12,6 +12,8 @@
 @interface TweetCell : UITableViewCell
 
 @property (strong, nonatomic) Tweet *tweet;
+@property (strong, nonatomic) User *user;
+
 @property (weak, nonatomic) IBOutlet UILabel *username;
 @property (weak, nonatomic) IBOutlet UIImageView *profile;
 @property (weak, nonatomic) IBOutlet UILabel *tweetContent;
@@ -20,5 +22,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *favoriteButton;
 @property (weak, nonatomic) IBOutlet UILabel *retweetCount;
 @property (weak, nonatomic) IBOutlet UILabel *favoriteCount;
+
+- (void) refreshData;
 
 @end

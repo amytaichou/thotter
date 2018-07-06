@@ -52,11 +52,11 @@
     [[APIManager shared] getHomeTimelineWithCompletion:^(NSArray *tweets, NSError *error) {
         if (tweets) {
             NSLog(@"😎😎😎 Successfully loaded home timeline");
-            for (Tweet *tweet in tweets) {
+            /*for (Tweet *tweet in tweets) {
                 self.tweetArray = tweets; // *****
                 NSLog(@"%@", tweet.text);
-            }
-            
+            }*/
+            self.tweetArray = (NSMutableArray* ) tweets;
             [self.tableView reloadData];
             [self.refreshControl endRefreshing];
             

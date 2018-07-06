@@ -7,6 +7,7 @@
 //
 
 #import "Tweet.h"
+#import "User.h"
 
 @implementation Tweet
 
@@ -30,10 +31,16 @@
         self.retweetCount = [dictionary[@"retweet_count"] intValue];
         self.retweeted = [dictionary[@"retweeted"] boolValue];
         
+        
+        
         // TODO: initialize user
         
         NSDictionary *user = dictionary[@"user"];
         self.user = [[User alloc] initWithDictionary:user];
+        
+        NSString *pic = dictionary[@"user"][@"profile_image_url_https"];
+        NSURL *profile = [NSURL URLWithString:pic];
+        self.profileURL = profile;
         
         // TODO: Format and set createdAtString
         

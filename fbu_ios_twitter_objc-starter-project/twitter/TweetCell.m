@@ -9,6 +9,8 @@
 #import "TweetCell.h"
 #import "Tweet.h"
 #import "APIManager.h"
+#import "User.h"
+#import "UIImageView+AFNetworking.h"
 
 @implementation TweetCell
 
@@ -25,8 +27,15 @@
 } */
 
 - (void) setTweet:(Tweet *)tweet {
-    self.username.text = tweet.user.name;
-    self.tweetContent.text = tweet.text;
+    _tweet = tweet;
+    self.username.text = self.tweet.user.name;
+    self.tweetContent.text = self.tweet.text;
+    
+    self.profile.image = nil;
+    [self.profile setImageWithURL: self.tweet.profileURL];
+    
+    self.retweetCount.text = [NSString stringWithFormat:@"%i", self.tweet.retweetCount];
+    self.favoriteCount.text = [NSString stringWithFormat:@"%i", self.tweet.favoriteCount];
 }
 
 - (IBAction)didTapFavorite:(id)sender {
@@ -34,24 +43,52 @@
     // TODO: Update cell UI
     // TODO: Send a POST request to the POST favorites/create endpoint
     
-    self.tweet.favorited = YES;
-    self.tweet.favoriteCount += 1;
-    
+
+    NSLog(@"hello");
     [[APIManager shared] favorite:self.tweet completion:^(Tweet *tweet, NSError *error) {
         if(error){
             NSLog(@"Error favoriting tweet: %@", error.localizedDescription);
+            [self refreshData];
         }
         else{
             NSLog(@"Successfully favorited the following Tweet: %@", tweet.text);
+            self.tweet.favorited = YES;
+            self.tweet.favoriteCount += 1;
+            [self refreshData];
         }
     }];
+}
+
+- (IBAction)didTapRetweet:(id)sender {
+    // TODO: Update the local tweet model
+    // TODO: Update cell UI
+    // TODO: Send a POST request to the POST favorites/create endpoint
     
+    
+    [[APIManager shared] retweet:self.tweet completion:^(Tweet *tweet, NSError *error) {
+        if(error){
+            NSLog(@"Error retweeting tweet: %@", error.localizedDescription);
+            [self refreshData];
+        }
+        else{
+            NSLog(@"Successfully retweeted the following Tweet: %@", tweet.text);
+            self.tweet.retweeted = YES;
+            self.tweet.retweetCount += 1;
+            [self refreshData];
+        }
+    }];
 }
 
 - (void) refreshData {
     //[NSString stringWithFormat:@"%d", self.retweetCount.text];
-    self.tweet.retweetCount = [self.retweetCount.text intValue];
-    self.tweet.favoriteCount = [self.favoriteCount.text intValue];
+    if (self.tweet.retweeted) {
+        self.retweetCount.text = [NSString stringWithFormat:@"%i", self.tweet.retweetCount];
+        self.retweetButton.selected = YES;
+    } else if(self.tweet.favorited){
+     self.favoriteButton.selected = YES;
+    self.favoriteCount.text = [NSString stringWithFormat:@"%i", self.tweet.favoriteCount];
+    }
+    
 }
     
     @end
