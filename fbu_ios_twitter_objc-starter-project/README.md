@@ -2,7 +2,7 @@
 
 **Thotter** is a basic twitter app to read and compose tweets the [Twitter API](https://apps.twitter.com/).
 
-Time spent: **X** hours spent in total
+Time spent: **20** hours spent in total
 
 ## User Stories
 
@@ -21,7 +21,7 @@ The following **required** functionality is completed:
 
 The following **optional** features are implemented:
 
-- [ ] Tweet Details Page: User can tap on a tweet to view it, with controls to retweet, favorite, and reply.
+- [x] Tweet Details Page: User can tap on a tweet to view it, with controls to retweet, favorite, and reply.
 - [ ] User can view their profile in a *profile tab*
 - Contains the user header view: picture and tagline
 - Contains a section with the users basic stats: # tweets, # following, # followers
@@ -47,20 +47,22 @@ The following **additional** features are implemented:
 
 Please list two areas of the assignment you'd like to **discuss further with your peers** during the next class (examples include better ways to implement something, how to extend your app in certain ways, etc):
 
-1.
-2.
+1. How to use TweetCells from home timeline and copy them over to the mentions timeline without having to create a new object
+2. How to make app flow smoother (switching from one page to another, different visuals for liking/retweeting, etc)
 
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://im3.ezgif.com/tmp/ezgif-3-da8c4e2f4b.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
 
 Describe any challenges encountered while building the app.
+
+I took this assignment very slowly and made sure that I thoroughly understood everything rather than copying and pasting the given code, so I did less of the optional stories. Learning autolayout was also very frustrating as everything I did created an error. Twitter also crashed often, so I had no choice but to wait for it to start over again and there wasn't much I could do about it. Debugging took longer for this app than any previous app we've built, as our errors were buried deep in the code rather than in our storyboard.
 
 ## Credits
 
@@ -70,7 +72,7 @@ List an 3rd party libraries, icons, graphics, or other assets you used in your a
 
 ## License
 
-Copyright [yyyy] [name of copyright owner]
+Copyright [2018] [Amy Liu]
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
