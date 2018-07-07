@@ -10,7 +10,6 @@
 #import "Tweet.h"
 #import "TweetCell.h"
 
-
 @interface APIManager()
 
 @end
