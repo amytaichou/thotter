@@ -47,8 +47,8 @@ The following **additional** features are implemented:
 
 Please list two areas of the assignment you'd like to **discuss further with your peers** during the next class (examples include better ways to implement something, how to extend your app in certain ways, etc):
 
-1.
-2.
+1. How to use TweetCells from home timeline and copy them over to the mentions timeline without having to create a new object
+2. How to make app flow smoother (switching from one page to another, different visuals for liking/retweeting, etc)
 
 ## Video Walkthrough
 
@@ -61,6 +61,8 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 ## Notes
 
 Describe any challenges encountered while building the app.
+
+I took this assignment very slowly and made sure that I thoroughly understood everything rather than copying and pasting the given code, so I did less of the optional stories. Learning autolayout was also very frustrating as everything I did created an error. Twitter also crashed often, so I had no choice but to wait for it to start over again and there wasn't much I could do about it. Debugging took longer for this app than any previous app we've built, as our errors were buried deep in the code rather than in our storyboard.
 
 ## Credits
 
