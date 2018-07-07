@@ -1,20 +1,19 @@
 //
-//  TimelineViewController.m
+//  MentionsViewController.m
 //  twitter
 //
 //  Created by emersonmalca on 5/28/18.
 //  Copyright © 2018 Emerson Malca. All rights reserved.
 //
 
-#import "TimelineViewController.h"
+#import "MentionsViewController.h"
 #import "APIManager.h"
 #import "TweetCell.h"
 #import "ComposeViewController.h"
 #import "AppDelegate.h"
 #import "LoginViewController.h"
-#import "DetailedViewController.h"
 
-@interface TimelineViewController () <ComposeViewControllerDelegate, UITableViewDataSource, UITableViewDelegate>
+@interface MentionsViewController () <ComposeViewControllerDelegate, UITableViewDataSource, UITableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) NSMutableArray *tweetArray;
@@ -22,17 +21,7 @@
 
 @end
 
-@implementation TimelineViewController
-
-- (IBAction)logout:(id)sender {
-    AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
-    
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    LoginViewController *loginViewController = [storyboard instantiateViewControllerWithIdentifier:@"LoginViewController"];
-    appDelegate.window.rootViewController = loginViewController;
-    
-    [[APIManager shared] logout];
-}
+@implementation MentionsViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -40,31 +29,25 @@
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
     
-    self.tableView.rowHeight = UITableViewAutomaticDimension;
-    
     [self fetchTweets: nil];
     
     self.refreshControl = [[UIRefreshControl alloc] init];
     [self.refreshControl addTarget:self action:@selector(fetchTweets:) forControlEvents:UIControlEventValueChanged];
     [self.tableView insertSubview:self.refreshControl atIndex:0];
-
+    
 }
 
 - (void)fetchTweets:(UIView *)sender {
     // Get timeline
-    [[APIManager shared] getHomeTimelineWithCompletion:^(NSArray *tweets, NSError *error) {
+    [[APIManager shared] getMentionsTimelineWithCompletion:^(NSArray *tweets, NSError *error) {
         if (tweets) {
-            NSLog(@"😎😎😎 Successfully loaded home timeline");
-            /*for (Tweet *tweet in tweets) {
-                self.tweetArray = tweets; // *****
-                NSLog(@"%@", tweet.text);
-            }*/
+            NSLog(@"😎😎😎 Successfully loaded mentions timeline");
             self.tweetArray = (NSMutableArray* ) tweets;
             [self.tableView reloadData];
             [self.refreshControl endRefreshing];
             
         } else {
-            NSLog(@"😫😫😫 Error getting home timeline: %@", error.localizedDescription);
+            NSLog(@"😫😫😫 Error getting mentions timeline: %@", error.localizedDescription);
         }
     }];
 }
@@ -100,20 +83,11 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
-    if ([segue.identifier isEqualToString:@"SegueToComposeViewController"]) {
-        UINavigationController *navigationController = [segue destinationViewController];
-        ComposeViewController *composeController = (ComposeViewController*)navigationController.topViewController;
-        composeController.delegate = self;
-    } else if ([segue.identifier isEqualToString:@"SegueToDetailedViewController"]) {
-        UITableViewCell *tappedCell = sender;
-        NSIndexPath *indexPath = [self.tableView indexPathForCell:tappedCell];
-        
-        Tweet *tweet = self.tweetArray[indexPath.row];
-        
-        DetailedViewController *detailedTweetController = [segue destinationViewController];
-        
-        detailedTweetController.tweet = tweet;
-    }
+    UINavigationController *navigationController = [segue destinationViewController];
+    ComposeViewController *composeController = (ComposeViewController*)navigationController.topViewController;
+    composeController.delegate = self;
 }
-    
+
+
+
 @end
